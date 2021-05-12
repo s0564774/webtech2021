@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+    <script src= "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<div align="center">
+<div class="container-fluid">
+	<h2 >Customer Registrierung</h2>
+	<tr>
+		<div align = "center" >
+		<button type="button" class="btn btn-primary btn-lg">Large button</button>		   
+		     <h3><a  th:href="@{'/new'}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Hinzufügen</a></h3>     
+	    </div>
+	
+	</tr>
+	<tr>
+	
+	<br>
+	<br>
+	<br>
+	
+	
+	<div class="col-sm-5" align = "center">
+                 <div class="panel-body" align = "center" >
+                 <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      		<th>Student ID</th>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Fee</th>
+            <th>Edit</th>
+            <th>Delete</th>
+   	</tr>
+  </thead>
+  <tbody>
+      <tr  th:each="customer : ${listcustomer }">
+		<td th:text="${customer.id}">Student ID</td>
+		<td th:text="${customer.customername}">StudentName</td>
+		<td th:text="${customer.course}">Course</td>
+		<td th:text="${customer.fee}">Fee</td>				
+		<td>
+			<a th:href="@{'/edit/' + ${customer.id}}">Edit</a>
+		</td>							    
+		<td>
+			<a th:href="@{'/delete/' + ${customer.id}}">Delete</a>
+		</td>		    
+		</tr> 
+   
+  </tbody>
+</table>
+                    
+                 </div>
+ 
+            </div> 
+            
+            
+            
+ 
+	</tr>
+ 
+	</tbody>
+	</table>
+	<div>
+	</div>
+</body>
+</html>
