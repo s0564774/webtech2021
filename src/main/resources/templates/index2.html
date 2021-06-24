@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
     <script src= "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
 	<link rel="stylesheet" href="/css/style.css" />
-	<title>Document</title>
+	<title>WebTech 2021</title>
 </head>
 
 <body>
@@ -15,8 +15,8 @@
 
 <nav class="navbar navbar-light bg-dark sticky-top">
 	<div class="container-fluid">
-		<a class="navbar-brand logo" href="#"><img src="img/thumbup.png"></a> <div class="logo-titel">Petition Manager</div>  
-		<h4><a  th:href="@{'/new'}" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Hinzufügen</a></h4>
+		<a class="navbar-brand logo" href="#"><img src="img/thumbup.png"></a> <div class="logo-titel"></div>  
+		<h4><a  th:href="@{'/new'}" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">Hinzufügen</a></h4>
 	</div>
 </nav>
 
@@ -27,25 +27,25 @@
 		<table class="table">
 <thead class="thead-dark">
 <tr>
-	 <th>Student ID</th>
-   <th>Student Name</th>
-   <th>Course</th>
-   <th>Fee</th>
-   <th>Edit</th>
-   <th>Delete</th>
+	 <th>ID</th>
+   <th>Name</th>
+   <th>Vorname</th>
+   <th>Alter</th>
+   <th>Bearbeiten</th>
+   <th>Entfernen</th>
 </tr>
 </thead>
 <tbody>
 <tr  th:each="customer : ${listcustomer }">
-<td th:text="${customer.id}">Student ID</td>
-<td th:text="${customer.customername}">StudentName</td>
-<td th:text="${customer.course}">Course</td>
-<td th:text="${customer.fee}">Fee</td>				
+<td th:text="${customer.id}">ID</td>
+<td th:text="${customer.customername}">Name</td>
+<td th:text="${customer.course}">Vorname</td>
+<td th:text="${customer.fee}">Alter</td>				
 <td>
-   <a th:href="@{'/edit/' + ${customer.id}}">Edit</a>
+   <a th:href="@{'/edit/' + ${customer.id}}" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Bearbeiten</a>
 </td>							    
 <td>
-   <a th:href="@{'/delete/' + ${customer.id}}">Delete</a>
+   <a th:href="@{'/delete/' + ${customer.id}}" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">Entfernen</a>
 </td>		    
 </tr> 
 
@@ -56,5 +56,8 @@
 
    </div> 
 </div>
+<div class="footer">
+	<p>Webtech 2021 - Eddy Klammer</p>
+  </div>
 </body>
 </html>

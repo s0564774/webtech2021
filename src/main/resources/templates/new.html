@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
     <script src= "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
 	<link rel="stylesheet" href="/css/style.css" />
-	<title>Document</title>
+	<title>Neu / Bearbeiten</title>
 </head>
 <body>
 
-    
 <nav class="navbar navbar-light bg-dark sticky-top">
 	<div class="container-fluid">
-		<a class="navbar-brand logo" href="#"><img src="/img/thumbup.png"></a> <div class="logo-titel">Petition Manager</div>  
-		<h4><a  href="javascript:history.back()" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Abbrechen</a></h4>
+		<a class="navbar-brand logo" href="#"><img src="/img/thumbup.png"></a> <div class="logo-titel"></div>  
+		<h4><a  href="javascript:history.back()" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">Abbrechen</a></h4>
 	</div>
 </nav>
 
@@ -27,10 +26,10 @@
       
  		<div alight="left">
             <tr>
-                <label class="form-label" >Customer Name</label>
+                <label class="form-label" >Name</label>
                 <td>
 	                <input type="hidden" th:field="*{id}" />
-	                <input type="text" th:field="*{customername}" class="form-control" placeholder="Customer Name" />
+	                <input type="text" th:field="*{customername}" class="form-control" placeholder="Name" />
                 </td>
             </tr>
          </div>   
@@ -38,19 +37,19 @@
           	<div alight="left">
           
             <tr>
-                 <label class="form-label" >Course</label>
-                <td><input type="text" th:field="*{course}" class="form-control" placeholder="Course" /></td>
+                 <label class="form-label" >Vorname</label>
+                <td><input type="text" th:field="*{course}" class="form-control" placeholder="Vorname" /></td>
             </tr>
             </div> 
             <div alight="left">
                  <tr>
-                 <label class="form-label" >Fee</label>
-                <td><input type="text" th:field="*{fee}" class="form-control" placeholder="Fee" /></td>
+                 <label class="form-label" >Alter</label>
+                <td><input type="text" th:field="*{fee}" class="form-control" placeholder="Alter" /></td>
             </tr>
             </div> 
 			<br>
             <tr>
-            <td colspan="2"><button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Speichern</button> </td>
+            <td colspan="2"><button type="submit" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">Speichern</button> </td>
             </tr>
         </table>
     </form>
