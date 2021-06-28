@@ -42,3 +42,7 @@ h3 {
  .footer p {
     margin-top:20px
  }
+
+ .btn {
+    padding: .1rem 0.9rem !important;
+ }
